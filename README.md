@@ -18,4 +18,5 @@ Main Author: [Christoph Pilz](https://github.com/MrMushroom)
 
 ## Acknowledgement
 The majority of this work is part of my ([Christoph Pilz](https://www.researchgate.net/profile/Christoph-Pilz)) PhD studies at [Graz University of Technology](https://www.tugraz.at/home) in cooperation with the [Virtual Vehicle Research GmbH](https://www.v2c2.at/).
+
 Features are also integrated across various funded projects (see [vehicleCAPTAIN](https://github.com/virtual-vehicle/vehicle_captain)).
