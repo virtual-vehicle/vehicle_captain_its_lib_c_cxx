@@ -1,4 +1,4 @@
-# V2X Library for C and CXX
+# ETSI V2X Library (for C/CXX)
 The *vcits* library is part of the [vehicleCAPTAIN](https://github.com/virtual-vehicle/vehicle_captain).
 
 This library allows decoding, encoding and validation of [ETSI V2X messages](https://forge.etsi.org/rep/ITS/asn1).
