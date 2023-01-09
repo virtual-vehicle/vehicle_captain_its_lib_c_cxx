@@ -4,8 +4,12 @@ The *vcits* library is part of the [vehicleCAPTAIN](https://github.com/virtual-v
 This library allows decoding, encoding and validation of [ETSI V2X messages](https://forge.etsi.org/rep/ITS/asn1).
 
 Version support:
-* v1.x: Messages {CAM, DENM, IVIM, MAPEM, RTCMEM, SPATEM, SREM, SSEM}, Languages{C: raw, C++: with wrapper}
-* v1.x.ex: Additional Messages {CPM, vif_container}
+* v1.x
+  * Messages {CAM, DENM, IVIM, MAPEM, RTCMEM, SPATEM, SREM, SSEM}
+  * Languages{C: raw, C++: with wrapper}
+* v1.x.ex
+  * Experimental Messages {CPM}
+  * Additional Messages {vif_container}
 
 ## Copyright
 Please cite the [vehicleCAPTAIN paper](https://TODO_link_to_paper_when_it_is_published) if you used any part of this library for your work.
