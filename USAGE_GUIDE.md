@@ -2,7 +2,7 @@
 This is how to use the library in three steps:
 1. get the library (use one of the three methods below)
 2. copy the library into your project (cmake wrappers are prepared)
-3. use the decoder/encoder/verify functions as shown in the [receiver](https://github.com/virtual-vehicle/vehicle_captain_routing_receiver_example)/[sender](https://github.com/virtual-vehicle/vehicle_captain_routing_sender_example) sample.
+3. use the decoder/encoder/verify functions as shown in the [receiver](https://github.com/virtual-vehicle/vehicle_captain_routing_receiver_example) / [sender](https://github.com/virtual-vehicle/vehicle_captain_routing_sender_example) sample.
 
 ## Quickstart Guide
 **Release tags** have been tested in use and should be stable.
@@ -15,19 +15,16 @@ Use this, if you do not want to have any hassle with code auto-generation.
 Install Prerequisites
 ````bash
 sudo apt-get install git
-
 ````
 Checkout specific version
 ````bash
 git clone <repo>
 git checkout <tag>
-
 ````
 Copy content of release folder
 ````bash
 cd <repo>
 cp -r release <destination>
-
 ````
 
 ### Code generation with provided Docker script (Not Recommended)
