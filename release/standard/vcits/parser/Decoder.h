@@ -1,13 +1,25 @@
 //
 // Created by christophpilz on 19.05.2021.
 //
+// Description:
+// Decoder Wrapper for C++
+//
+// Author(s): "Christoph Pilz"
+// Copyright: "Copyright 2023, vehicleCAPTAIN toolbox"
+// Credits: ["Thispointer.com"]
+// License: "BSD 3-Clause"
+// Version: "1.0"
+// Maintainer: "Christoph Pilz"
+// E-Mail: "christoph.pilz@v2c2.at"
+// Status = "Production"
+//
 // Possible Improvements:
-// - have a decode method without type descriptor -> automatically find out which type of message it is and decode the right one
-// - refactor C++ style
+// - [] have a decode method without type descriptor -> automatically find out which type of message it is and decode the right one
+// - [] refactor C++ style
 //
 
-#ifndef VIF_ITS_LIB_DECODER_H
-#define VIF_ITS_LIB_DECODER_H
+#ifndef VC_ITS_LIB_DECODER_H
+#define VC_ITS_LIB_DECODER_H
 
 extern "C" {
 #include "asn_application.h"
@@ -27,4 +39,4 @@ private:
 };
 
 
-#endif //VIF_ITS_LIB_DECODER_H
+#endif //VC_ITS_LIB_DECODER_H

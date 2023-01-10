@@ -5,20 +5,20 @@
 // Exception, if something is not yet implemented
 //
 // Author(s): "Christoph Pilz"
-// Copyright: "Copyright 2021, VIF V2X Platform"
+// Copyright: "Copyright 2023, vehicleCAPTAIN toolbox"
 // Credits: ["Thispointer.com"]
-// License: "TBD"
-// Version: "TBD"
+// License: "BSD 3-Clause"
+// Version: "1.0"
 // Maintainer: "Christoph Pilz"
 // E-Mail: "christoph.pilz@v2c2.at"
 // Status = "Production"
 //
 // Possible Improvements:
-// [] License
+// - [ ]
 //
 
-#ifndef V2X_LIBRARY_ENCODINGEXCEPTION_H
-#define V2X_LIBRARY_ENCODINGEXCEPTION_H
+#ifndef VC_ITS_ENCODINGEXCEPTION_H
+#define VC_ITS_ENCODINGEXCEPTION_H
 
 #pragma once
 
@@ -30,4 +30,4 @@ public:
     EncodingException() : std::runtime_error("Encoding failed: values may be out of range") { };
 };
 
-#endif //V2X_LIBRARY_ENCODINGEXCEPTION_H
+#endif //VC_ITS_ENCODINGEXCEPTION_H

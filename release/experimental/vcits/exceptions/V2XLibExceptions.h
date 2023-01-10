@@ -5,20 +5,20 @@
 // Single header, to include all V2X library exceptions
 //
 // Author(s): "Christoph Pilz"
-// Copyright: "Copyright 2021, VIF V2X Library"
+// Copyright: "Copyright 2023, vehicleCAPTAIN toolbox"
 // Credits: ["Thispointer.com"]
-// License: "TBD"
-// Version: "TBD"
+// License: "BSD 3-Clause"
+// Version: "1.0"
 // Maintainer: "Christoph Pilz"
 // E-Mail: "christoph.pilz@v2c2.at"
 // Status = "Production"
 //
 // Possible Improvements:
-// [] License
+// - [ ]
 //
 
-#ifndef V2X_LIBRARY_V2XLIBEXCEPTIONS_H
-#define V2X_LIBRARY_V2XLIBEXCEPTIONS_H
+#ifndef VC_ITS_V2XLIBEXCEPTIONS_H
+#define VC_ITS_V2XLIBEXCEPTIONS_H
 
 #pragma once
 
@@ -26,4 +26,4 @@
 #include "EncodingException.h"
 #include "ValidateConstraintsException.h"
 
-#endif //V2X_LIBRARY_V2XLIBEXCEPTIONS_H
+#endif //VC_ITS_V2XLIBEXCEPTIONS_H

@@ -1,12 +1,24 @@
 //
 // Created by christophpilz on 19.05.2021.
 //
+// Description:
+// Decoder Wrapper for C++
+//
+// Author(s): "Christoph Pilz"
+// Copyright: "Copyright 2023, vehicleCAPTAIN toolbox"
+// Credits: ["Thispointer.com"]
+// License: "BSD 3-Clause"
+// Version: "1.0"
+// Maintainer: "Christoph Pilz"
+// E-Mail: "christoph.pilz@v2c2.at"
+// Status = "Production"
+//
 // Possible Improvements:
-// - refactor C++ style
+// - [] refactor C++ style
 //
 
-#ifndef VIF_ITS_LIB_ENCODER_H
-#define VIF_ITS_LIB_ENCODER_H
+#ifndef VC_ITS_LIB_ENCODER_H
+#define VC_ITS_LIB_ENCODER_H
 
 extern "C" {
 #include "asn_application.h"
@@ -34,4 +46,4 @@ private:
 };
 
 
-#endif //VIF_ITS_LIB_ENCODER_H
+#endif //VC_ITS_LIB_ENCODER_H
