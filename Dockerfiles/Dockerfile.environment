@@ -1,0 +1,45 @@
+# Environment for generation of the vcits library
+#
+# Project: vehicleCAPTAIN ITS library
+#
+# Author: Christoph Pilz
+#
+
+FROM ubuntu:20.04
+
+RUN DEBIAN_FRONTEND="noninteractive" apt-get update && apt-get -y install tzdata
+
+RUN apt-get update \
+  && apt-get install -y ssh \
+      build-essential \
+      gcc \
+      g++ \
+      gdb \
+      clang \
+      cmake \
+      rsync \
+      tar \
+      python \
+  && apt-get clean
+
+# install generator dependencies
+RUN apt-get update \
+  && apt-get install -y git \
+    autoconf \
+    libtool \
+  && apt-get clean
+
+# install generator
+WORKDIR /tmp
+RUN git clone https://github.com/brchiu/asn1c.git -n asn1c
+WORKDIR /tmp/asn1c
+RUN git checkout velichkov_s1ap_plus_option_group_plus_adding_trailing_ull
+RUN test -f configure || autoreconf -iv
+RUN ./configure
+RUN make
+RUN make check
+RUN make install
+
+# create working environment
+WORKDIR /tmp/gen_env
+COPY . .
