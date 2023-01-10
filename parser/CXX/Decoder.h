@@ -18,8 +18,8 @@
 // - [] refactor C++ style
 //
 
-#ifndef VCITS_LIB_DECODER_H
-#define VCITS_LIB_DECODER_H
+#ifndef VC_ITS_LIB_DECODER_H
+#define VC_ITS_LIB_DECODER_H
 
 extern "C" {
 #include "asn_application.h"
@@ -39,4 +39,4 @@ private:
 };
 
 
-#endif //VCITS_LIB_DECODER_H
+#endif //VC_ITS_LIB_DECODER_H
