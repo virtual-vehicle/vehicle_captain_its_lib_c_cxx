@@ -89,7 +89,7 @@ function are_standards_present() {
   if ! [[ -f "$VC_ITS_ASN1_SPECS_DIR"/"$DENM_SPEC" ]]; then
     echo "WARNING: $VC_ITS_ASN1_SPECS_DIR/$DENM_SPEC missing."
   fi
-  if ! [[ -f ""$VC_ITS_ASN1_SPECS_DIR"/$EVCSN_SPEC" ]]; then
+  if ! [[ -f "$VC_ITS_ASN1_SPECS_DIR/$EVCSN_SPEC" ]]; then
     echo "WARNING: $VC_ITS_ASN1_SPECS_DIR/$EVCSN_SPEC missing."
   fi
   if ! [[ -f "$VC_ITS_ASN1_SPECS_DIR"/"$EVRSR_SPEC" ]]; then
