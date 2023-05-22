@@ -1,0 +1,23 @@
+FROM ubuntu:18.04
+
+RUN DEBIAN_FRONTEND="noninteractive" apt-get update && apt-get -y install tzdata
+
+RUN apt-get update \
+  && apt-get install -y ssh \
+      build-essential \
+      gcc \
+      g++ \
+      gdb \
+      clang \
+      cmake \
+      rsync \
+      tar \
+      python \
+  && apt-get clean
+
+# install the demo
+WORKDIR /tmp/demo
+RUN rm -rf *
+COPY . .
+WORKDIR /tmp/demo/build
+RUN cmake ../release && make
