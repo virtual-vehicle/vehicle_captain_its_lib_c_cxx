@@ -31,7 +31,12 @@ VC_ITS_LIB_SRC_DIR=$VC_ITS_LIB_ROOT_DIR/"src"
 
 CDD_SPEC_v2=etsi/cdd_ts102894_2/ITS-Container.asn
 CAM_SPEC=etsi/cam_en302637_2/CAM-PDU-Descriptions.asn
-CPM_SPEC=experimental/CPM-PDU-Descriptions.asn
+CPM_SPEC=etsi/cpm_ts103324/asn/CPM-PDU-Descriptions.asn
+CPM_ORIGINATING_STATION_SPEC=etsi/cpm_ts103324/asn/CPM-OriginatingStationContainers.asn
+CPM_PERCEIVED_OBJECT_SPEC=etsi/cpm_ts103324/asn/CPM-PerceivedObjectContainer.asn
+CPM_PERCEPTION_REGION_SPEC=etsi/cpm_ts103324/asn/CPM-PerceptionRegionContainer.asn
+CPM_SENSOR_INFORMATION_SPEC=etsi/cpm_ts103324/asn/CPM-SensorInformationContainer.asn
+CPM_CDD_SPEC=etsi/cpm_ts103324/asn/cdd/ETSI-ITS-CDD.asn
 DENM_SPEC=etsi/denm_en302637_3/DENM-PDU-Descriptions.asn
 EVCSN_SPEC=etsi/evcsn-ts101556_1/EVCSN-PDU-Descriptions.asn
 EVRSR_SPEC=etsi/evrsr_ts101556_3/EV-RSR-PDU-Descriptions.asn
@@ -173,12 +178,13 @@ function compile_CAM() {
 }
 function compile_CPM() {
   install -d "$VC_ITS_LIB_ROOT_DIR"/cpm
-  asn1c -D "$VC_ITS_LIB_ROOT_DIR"/cpm -R -no-gen-example -fcompound-names -fno-include-deps -pdu=CPM \
+  asn1c -D "$VC_ITS_LIB_ROOT_DIR"/cpm -R -no-gen-example -fcompound-names -fno-include-deps \
     "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_SPEC" \
-    "$VC_ITS_ASN1_SPECS_DIR"/"$CAM_SPEC" \
-    "$VC_ITS_ASN1_SPECS_DIR"/"$CDD_SPEC_v2"\
-    "$IS_TS_ISO_DIR"/'ISO24534-3_ElectronicRegistrationIdentificationVehicleDataModule-patched.asn' \
-    "$ADDITIONAL_MODULES_DIR"/'ISO-TS-19091-addgrp-C-2018-patched.asn'
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_ORIGINATING_STATION_SPEC" \
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_PERCEIVED_OBJECT_SPEC" \
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_PERCEPTION_REGION_SPEC" \
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_SENSOR_INFORMATION_SPEC" \
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_CDD_SPEC"
 
   install -d "$VC_ITS_LIB_ROOT_DIR"/cpm/src
   mv "$VC_ITS_LIB_ROOT_DIR"/cpm/*.c "$VC_ITS_LIB_ROOT_DIR"/cpm/src/
