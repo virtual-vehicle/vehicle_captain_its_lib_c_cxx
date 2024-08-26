@@ -34,7 +34,7 @@ memb_nature_constraint_18(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 1 && value <= 9)) {
+	if((value >= 1L && value <= 9L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -59,7 +59,7 @@ memb_serialNumber_constraint_18(const asn_TYPE_descriptor_t *td, const void *spt
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 99)) {
+	if((value >= 0L && value <= 99L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -85,7 +85,7 @@ memb_countryCode_constraint_2(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	size = st->size;
 	
-	if((size == 2)) {
+	if((size == 2UL)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -96,62 +96,90 @@ memb_countryCode_constraint_2(const asn_TYPE_descriptor_t *td, const void *sptr,
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_trafficSignPictogram_constr_5 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_type_trafficSignPictogram_constr_5 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  2,  2,  0,  2 }	/* (0..2,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_publicFacilitiesPictogram_constr_10 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_type_publicFacilitiesPictogram_constr_10 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  0,  0,  0,  0 }	/* (0..0,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_ambientOrRoadConditionPictogram_constr_13 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_type_ambientOrRoadConditionPictogram_constr_13 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  1,  1,  0,  1 }	/* (0..1,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_serviceCategoryCode_constr_4 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_type_serviceCategoryCode_constr_4 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  2,  2,  0,  2 }	/* (0..2,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_nature_constr_19 CC_NOTUSED = {
 	{ 1, 1 }	/* (1..9) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_nature_constr_19 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 4,  4,  1,  9 }	/* (1..9) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_serialNumber_constr_20 CC_NOTUSED = {
 	{ 1, 1 }	/* (0..99) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_serialNumber_constr_20 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 7,  7,  0,  99 }	/* (0..99) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_countryCode_constr_3 CC_NOTUSED = {
 	{ 0, 0 },
 	2	/* (SIZE(2..2)) */};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_countryCode_constr_3 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 0,  0,  2,  2 }	/* (SIZE(2..2)) */,
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static const asn_INTEGER_enum_map_t asn_MAP_trafficSignPictogram_value2enum_5[] = {
 	{ 0,	13,	"dangerWarning" },
 	{ 1,	10,	"regulatory" },
@@ -188,7 +216,18 @@ asn_TYPE_descriptor_t asn_DEF_trafficSignPictogram_5 = {
 	asn_DEF_trafficSignPictogram_tags_5,	/* Same as above */
 	sizeof(asn_DEF_trafficSignPictogram_tags_5)
 		/sizeof(asn_DEF_trafficSignPictogram_tags_5[0]), /* 2 */
-	{ &asn_OER_type_trafficSignPictogram_constr_5, &asn_PER_type_trafficSignPictogram_constr_5, NativeEnumerated_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_trafficSignPictogram_constr_5,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_trafficSignPictogram_constr_5,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		NativeEnumerated_constraint
+	},
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_trafficSignPictogram_specs_5	/* Additional specs */
 };
@@ -225,7 +264,18 @@ asn_TYPE_descriptor_t asn_DEF_publicFacilitiesPictogram_10 = {
 	asn_DEF_publicFacilitiesPictogram_tags_10,	/* Same as above */
 	sizeof(asn_DEF_publicFacilitiesPictogram_tags_10)
 		/sizeof(asn_DEF_publicFacilitiesPictogram_tags_10[0]), /* 2 */
-	{ &asn_OER_type_publicFacilitiesPictogram_constr_10, &asn_PER_type_publicFacilitiesPictogram_constr_10, NativeEnumerated_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_publicFacilitiesPictogram_constr_10,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_publicFacilitiesPictogram_constr_10,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		NativeEnumerated_constraint
+	},
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_publicFacilitiesPictogram_specs_10	/* Additional specs */
 };
@@ -264,7 +314,18 @@ asn_TYPE_descriptor_t asn_DEF_ambientOrRoadConditionPictogram_13 = {
 	asn_DEF_ambientOrRoadConditionPictogram_tags_13,	/* Same as above */
 	sizeof(asn_DEF_ambientOrRoadConditionPictogram_tags_13)
 		/sizeof(asn_DEF_ambientOrRoadConditionPictogram_tags_13[0]), /* 2 */
-	{ &asn_OER_type_ambientOrRoadConditionPictogram_constr_13, &asn_PER_type_ambientOrRoadConditionPictogram_constr_13, NativeEnumerated_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_ambientOrRoadConditionPictogram_constr_13,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_ambientOrRoadConditionPictogram_constr_13,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		NativeEnumerated_constraint
+	},
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_ambientOrRoadConditionPictogram_specs_13	/* Additional specs */
 };
@@ -275,7 +336,18 @@ static asn_TYPE_member_t asn_MBR_serviceCategoryCode_4[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_trafficSignPictogram_5,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"trafficSignPictogram"
 		},
@@ -284,7 +356,18 @@ static asn_TYPE_member_t asn_MBR_serviceCategoryCode_4[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_publicFacilitiesPictogram_10,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"publicFacilitiesPictogram"
 		},
@@ -293,7 +376,18 @@ static asn_TYPE_member_t asn_MBR_serviceCategoryCode_4[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ambientOrRoadConditionPictogram_13,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"ambientOrRoadConditionPictogram"
 		},
@@ -322,7 +416,18 @@ asn_TYPE_descriptor_t asn_DEF_serviceCategoryCode_4 = {
 	0,	/* No effective tags (count) */
 	0,	/* No tags (pointer) */
 	0,	/* No tags (count) */
-	{ &asn_OER_type_serviceCategoryCode_constr_4, &asn_PER_type_serviceCategoryCode_constr_4, CHOICE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_serviceCategoryCode_constr_4,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_serviceCategoryCode_constr_4,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		CHOICE_constraint
+	},
 	asn_MBR_serviceCategoryCode_4,
 	3,	/* Elements count */
 	&asn_SPC_serviceCategoryCode_specs_4	/* Additional specs */
@@ -334,7 +439,18 @@ static asn_TYPE_member_t asn_MBR_pictogramCategoryCode_18[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_nature_constr_19, &asn_PER_memb_nature_constr_19,  memb_nature_constraint_18 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_nature_constr_19,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_nature_constr_19,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_nature_constraint_18
+		},
 		0, 0, /* No default value */
 		"nature"
 		},
@@ -343,7 +459,18 @@ static asn_TYPE_member_t asn_MBR_pictogramCategoryCode_18[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_serialNumber_constr_20, &asn_PER_memb_serialNumber_constr_20,  memb_serialNumber_constraint_18 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_serialNumber_constr_20,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_serialNumber_constr_20,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_serialNumber_constraint_18
+		},
 		0, 0, /* No default value */
 		"serialNumber"
 		},
@@ -375,7 +502,18 @@ asn_TYPE_descriptor_t asn_DEF_pictogramCategoryCode_18 = {
 	asn_DEF_pictogramCategoryCode_tags_18,	/* Same as above */
 	sizeof(asn_DEF_pictogramCategoryCode_tags_18)
 		/sizeof(asn_DEF_pictogramCategoryCode_tags_18[0]), /* 2 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_pictogramCategoryCode_18,
 	2,	/* Elements count */
 	&asn_SPC_pictogramCategoryCode_specs_18	/* Additional specs */
@@ -387,7 +525,18 @@ static asn_TYPE_member_t asn_MBR_pictogramCode_2[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_OCTET_STRING,
 		0,
-		{ &asn_OER_memb_countryCode_constr_3, &asn_PER_memb_countryCode_constr_3,  memb_countryCode_constraint_2 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_countryCode_constr_3,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_countryCode_constr_3,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_countryCode_constraint_2
+		},
 		0, 0, /* No default value */
 		"countryCode"
 		},
@@ -396,7 +545,18 @@ static asn_TYPE_member_t asn_MBR_pictogramCode_2[] = {
 		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_serviceCategoryCode_4,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"serviceCategoryCode"
 		},
@@ -405,7 +565,18 @@ static asn_TYPE_member_t asn_MBR_pictogramCode_2[] = {
 		0,
 		&asn_DEF_pictogramCategoryCode_18,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"pictogramCategoryCode"
 		},
@@ -440,7 +611,18 @@ asn_TYPE_descriptor_t asn_DEF_pictogramCode_2 = {
 	asn_DEF_pictogramCode_tags_2,	/* Same as above */
 	sizeof(asn_DEF_pictogramCode_tags_2)
 		/sizeof(asn_DEF_pictogramCode_tags_2[0]), /* 2 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_pictogramCode_2,
 	3,	/* Elements count */
 	&asn_SPC_pictogramCode_specs_2	/* Additional specs */
@@ -452,7 +634,18 @@ asn_TYPE_member_t asn_MBR_ISO14823Code_1[] = {
 		0,
 		&asn_DEF_pictogramCode_2,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"pictogramCode"
 		},
@@ -461,7 +654,18 @@ asn_TYPE_member_t asn_MBR_ISO14823Code_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ISO14823Attributes,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"attributes"
 		},
@@ -493,7 +697,18 @@ asn_TYPE_descriptor_t asn_DEF_ISO14823Code = {
 	asn_DEF_ISO14823Code_tags_1,	/* Same as above */
 	sizeof(asn_DEF_ISO14823Code_tags_1)
 		/sizeof(asn_DEF_ISO14823Code_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_ISO14823Code_1,
 	2,	/* Elements count */
 	&asn_SPC_ISO14823Code_specs_1	/* Additional specs */

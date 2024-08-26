@@ -21,7 +21,7 @@ memb_roadNumberIdentifier_constraint_1(const asn_TYPE_descriptor_t *td, const vo
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 1 && value <= 999)) {
+	if((value >= 1L && value <= 999L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -32,21 +32,36 @@ memb_roadNumberIdentifier_constraint_1(const asn_TYPE_descriptor_t *td, const vo
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_roadNumberIdentifier_constr_3 CC_NOTUSED = {
 	{ 2, 1 }	/* (1..999) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_roadNumberIdentifier_constr_3 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 10,  10,  1,  999 }	/* (1..999) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 asn_TYPE_member_t asn_MBR_DestinationRoad_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DestinationRoad, derType),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DestinationRoadType,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"derType"
 		},
@@ -55,7 +70,18 @@ asn_TYPE_member_t asn_MBR_DestinationRoad_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_roadNumberIdentifier_constr_3, &asn_PER_memb_roadNumberIdentifier_constr_3,  memb_roadNumberIdentifier_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_roadNumberIdentifier_constr_3,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_roadNumberIdentifier_constr_3,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_roadNumberIdentifier_constraint_1
+		},
 		0, 0, /* No default value */
 		"roadNumberIdentifier"
 		},
@@ -64,7 +90,18 @@ asn_TYPE_member_t asn_MBR_DestinationRoad_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_UTF8String,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"roadNumberText"
 		},
@@ -97,7 +134,18 @@ asn_TYPE_descriptor_t asn_DEF_DestinationRoad = {
 	asn_DEF_DestinationRoad_tags_1,	/* Same as above */
 	sizeof(asn_DEF_DestinationRoad_tags_1)
 		/sizeof(asn_DEF_DestinationRoad_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_DestinationRoad_1,
 	3,	/* Elements count */
 	&asn_SPC_DestinationRoad_specs_1	/* Additional specs */

@@ -21,7 +21,7 @@ IviIdentificationNumber_constraint(const asn_TYPE_descriptor_t *td, const void *
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 1 && value <= 32767)) {
+	if((value >= 1L && value <= 32767L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -36,14 +36,18 @@ IviIdentificationNumber_constraint(const asn_TYPE_descriptor_t *td, const void *
  * This type is implemented using NativeInteger,
  * so here we adjust the DEF accordingly.
  */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_IviIdentificationNumber_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 asn_per_constraints_t asn_PER_type_IviIdentificationNumber_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  15,  15,  1,  32767 }	/* (1..32767,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static const ber_tlv_tag_t asn_DEF_IviIdentificationNumber_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (2 << 2))
 };
@@ -57,7 +61,18 @@ asn_TYPE_descriptor_t asn_DEF_IviIdentificationNumber = {
 	asn_DEF_IviIdentificationNumber_tags_1,	/* Same as above */
 	sizeof(asn_DEF_IviIdentificationNumber_tags_1)
 		/sizeof(asn_DEF_IviIdentificationNumber_tags_1[0]), /* 1 */
-	{ &asn_OER_type_IviIdentificationNumber_constr_1, &asn_PER_type_IviIdentificationNumber_constr_1, IviIdentificationNumber_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_IviIdentificationNumber_constr_1,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_IviIdentificationNumber_constr_1,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		IviIdentificationNumber_constraint
+	},
 	0, 0,	/* No members */
 	0	/* No specifics */
 };

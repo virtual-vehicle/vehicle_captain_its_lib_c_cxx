@@ -11,14 +11,18 @@
  * This type is implemented using NativeEnumerated,
  * so here we adjust the DEF accordingly.
  */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_CopValue_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 asn_per_constraints_t asn_PER_type_CopValue_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 4,  4,  0,  8 }	/* (0..8) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static const asn_INTEGER_enum_map_t asn_MAP_CopValue_value2enum_1[] = {
 	{ 0,	7,	"noEntry" },
 	{ 1,	9,	"co2class1" },
@@ -63,7 +67,18 @@ asn_TYPE_descriptor_t asn_DEF_CopValue = {
 	asn_DEF_CopValue_tags_1,	/* Same as above */
 	sizeof(asn_DEF_CopValue_tags_1)
 		/sizeof(asn_DEF_CopValue_tags_1[0]), /* 1 */
-	{ &asn_OER_type_CopValue_constr_1, &asn_PER_type_CopValue_constr_1, NativeEnumerated_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_CopValue_constr_1,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_CopValue_constr_1,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		NativeEnumerated_constraint
+	},
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_CopValue_specs_1	/* Additional specs */
 };

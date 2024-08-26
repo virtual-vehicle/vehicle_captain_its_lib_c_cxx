@@ -14,6 +14,7 @@ add_library(vcits-vccontainer SHARED
 src/AreaType.c
 src/AreaTypeInfo.c
 src/DecapStatus.c
+src/EXTERNAL.c
 src/EncapType.c
 src/ItsAID.c
 src/LocalInfo.c
@@ -29,6 +30,8 @@ src/TimeVal.c
 src/TxInfo.c
 src/TxSecurity.c
 )
+
+target_compile_options(vcits-vccontainer PRIVATE -Wno-incompatible-pointer-types)
 
 set_target_properties(vcits-vccontainer PROPERTIES VERSION ${PROJECT_VERSION})
 

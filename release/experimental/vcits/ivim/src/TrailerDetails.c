@@ -21,7 +21,7 @@ memb_trailerType_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 31)) {
+	if((value >= 0L && value <= 31L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -32,21 +32,36 @@ memb_trailerType_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_trailerType_constr_2 CC_NOTUSED = {
 	{ 1, 1 }	/* (0..31) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_trailerType_constr_2 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 5,  5,  0,  31 }	/* (0..31) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 asn_TYPE_member_t asn_MBR_TrailerDetails_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TrailerDetails, trailerType),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_trailerType_constr_2, &asn_PER_memb_trailerType_constr_2,  memb_trailerType_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_trailerType_constr_2,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_trailerType_constr_2,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_trailerType_constraint_1
+		},
 		0, 0, /* No default value */
 		"trailerType"
 		},
@@ -55,7 +70,18 @@ asn_TYPE_member_t asn_MBR_TrailerDetails_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_TrailerAxles,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"trailerAxles"
 		},
@@ -85,7 +111,18 @@ asn_TYPE_descriptor_t asn_DEF_TrailerDetails = {
 	asn_DEF_TrailerDetails_tags_1,	/* Same as above */
 	sizeof(asn_DEF_TrailerDetails_tags_1)
 		/sizeof(asn_DEF_TrailerDetails_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_TrailerDetails_1,
 	2,	/* Elements count */
 	&asn_SPC_TrailerDetails_specs_1	/* Additional specs */

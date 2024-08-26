@@ -46,6 +46,7 @@ src/DeltaReferencePosition.c
 src/DigitalMap.c
 src/DriveDirection.c
 src/DrivingLaneStatus.c
+src/EXTERNAL.c
 src/EmbarkationStatus.c
 src/EmergencyPriority.c
 src/EmergencyVehicleApproachingSubCauseCode.c
@@ -158,6 +159,8 @@ src/YawRate.c
 src/YawRateConfidence.c
 src/YawRateValue.c
 )
+
+target_compile_options(vcits-denm PRIVATE -Wno-incompatible-pointer-types)
 
 set_target_properties(vcits-denm PROPERTIES VERSION ${PROJECT_VERSION})
 

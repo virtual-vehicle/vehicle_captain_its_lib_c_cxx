@@ -21,7 +21,7 @@ memb_NativeInteger_constraint_1(const asn_TYPE_descriptor_t *td, const void *spt
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 127)) {
+	if((value >= 0L && value <= 127L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -32,29 +32,48 @@ memb_NativeInteger_constraint_1(const asn_TYPE_descriptor_t *td, const void *spt
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_Member_constr_2 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_Member_constr_2 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  7,  7,  0,  127 }	/* (0..127,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_AttributeIdList_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1	/* (SIZE(0..MAX)) */};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 asn_per_constraints_t asn_PER_type_AttributeIdList_constr_1 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  7,  7,  0,  127 }	/* (SIZE(0..127,...)) */,
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 asn_TYPE_member_t asn_MBR_AttributeIdList_1[] = {
 	{ ATF_POINTER, 0, 0,
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_Member_constr_2, &asn_PER_memb_Member_constr_2,  memb_NativeInteger_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_Member_constr_2,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_Member_constr_2,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_NativeInteger_constraint_1
+		},
 		0, 0, /* No default value */
 		""
 		},
@@ -77,7 +96,18 @@ asn_TYPE_descriptor_t asn_DEF_AttributeIdList = {
 	asn_DEF_AttributeIdList_tags_1,	/* Same as above */
 	sizeof(asn_DEF_AttributeIdList_tags_1)
 		/sizeof(asn_DEF_AttributeIdList_tags_1[0]), /* 1 */
-	{ &asn_OER_type_AttributeIdList_constr_1, &asn_PER_type_AttributeIdList_constr_1, SEQUENCE_OF_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_AttributeIdList_constr_1,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_AttributeIdList_constr_1,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_OF_constraint
+	},
 	asn_MBR_AttributeIdList_1,
 	1,	/* Single element */
 	&asn_SPC_AttributeIdList_specs_1	/* Additional specs */

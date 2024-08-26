@@ -24,7 +24,7 @@ memb_arrowDirection_constraint_1(const asn_TYPE_descriptor_t *td, const void *sp
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 7)) {
+	if((value >= 0L && value <= 7L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -49,7 +49,7 @@ memb_roadNumberIdentifier_constraint_1(const asn_TYPE_descriptor_t *td, const vo
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 1 && value <= 999)) {
+	if((value >= 1L && value <= 999L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -74,7 +74,7 @@ memb_streetName_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 1 && value <= 999)) {
+	if((value >= 1L && value <= 999L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -85,37 +85,60 @@ memb_streetName_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_arrowDirection_constr_2 CC_NOTUSED = {
 	{ 1, 1 }	/* (0..7) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_arrowDirection_constr_2 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_roadNumberIdentifier_constr_5 CC_NOTUSED = {
 	{ 2, 1 }	/* (1..999) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_roadNumberIdentifier_constr_5 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 10,  10,  1,  999 }	/* (1..999) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_streetName_constr_6 CC_NOTUSED = {
 	{ 2, 1 }	/* (1..999) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_streetName_constr_6 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 10,  10,  1,  999 }	/* (1..999) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 asn_TYPE_member_t asn_MBR_DDD_IO_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DDD_IO, arrowDirection),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_arrowDirection_constr_2, &asn_PER_memb_arrowDirection_constr_2,  memb_arrowDirection_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_arrowDirection_constr_2,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_arrowDirection_constr_2,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_arrowDirection_constraint_1
+		},
 		0, 0, /* No default value */
 		"arrowDirection"
 		},
@@ -124,7 +147,18 @@ asn_TYPE_member_t asn_MBR_DDD_IO_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DestinationPlaces,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"destPlace"
 		},
@@ -133,7 +167,18 @@ asn_TYPE_member_t asn_MBR_DDD_IO_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DestinationRoads,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"destRoad"
 		},
@@ -142,7 +187,18 @@ asn_TYPE_member_t asn_MBR_DDD_IO_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_roadNumberIdentifier_constr_5, &asn_PER_memb_roadNumberIdentifier_constr_5,  memb_roadNumberIdentifier_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_roadNumberIdentifier_constr_5,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_roadNumberIdentifier_constr_5,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_roadNumberIdentifier_constraint_1
+		},
 		0, 0, /* No default value */
 		"roadNumberIdentifier"
 		},
@@ -151,7 +207,18 @@ asn_TYPE_member_t asn_MBR_DDD_IO_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_streetName_constr_6, &asn_PER_memb_streetName_constr_6,  memb_streetName_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_streetName_constr_6,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_streetName_constr_6,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_streetName_constraint_1
+		},
 		0, 0, /* No default value */
 		"streetName"
 		},
@@ -160,7 +227,18 @@ asn_TYPE_member_t asn_MBR_DDD_IO_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_UTF8String,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"streetNameText"
 		},
@@ -169,7 +247,18 @@ asn_TYPE_member_t asn_MBR_DDD_IO_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DistanceOrDuration,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"distanceToDivergingPoint"
 		},
@@ -178,7 +267,18 @@ asn_TYPE_member_t asn_MBR_DDD_IO_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DistanceOrDuration,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"distanceToDestinationPlace"
 		},
@@ -216,7 +316,18 @@ asn_TYPE_descriptor_t asn_DEF_DDD_IO = {
 	asn_DEF_DDD_IO_tags_1,	/* Same as above */
 	sizeof(asn_DEF_DDD_IO_tags_1)
 		/sizeof(asn_DEF_DDD_IO_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_DDD_IO_1,
 	8,	/* Elements count */
 	&asn_SPC_DDD_IO_specs_1	/* Additional specs */

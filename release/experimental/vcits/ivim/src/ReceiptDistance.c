@@ -21,7 +21,7 @@ ReceiptDistance_constraint(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 16777215)) {
+	if((value >= 0L && value <= 16777215L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -36,14 +36,18 @@ ReceiptDistance_constraint(const asn_TYPE_descriptor_t *td, const void *sptr,
  * This type is implemented using Int3,
  * so here we adjust the DEF accordingly.
  */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_ReceiptDistance_constr_1 CC_NOTUSED = {
 	{ 4, 1 }	/* (0..16777215) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_type_ReceiptDistance_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 24, -1,  0,  16777215 }	/* (0..16777215) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static const ber_tlv_tag_t asn_DEF_ReceiptDistance_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (2 << 2))
 };
@@ -57,7 +61,18 @@ asn_TYPE_descriptor_t asn_DEF_ReceiptDistance = {
 	asn_DEF_ReceiptDistance_tags_1,	/* Same as above */
 	sizeof(asn_DEF_ReceiptDistance_tags_1)
 		/sizeof(asn_DEF_ReceiptDistance_tags_1[0]), /* 1 */
-	{ &asn_OER_type_ReceiptDistance_constr_1, &asn_PER_type_ReceiptDistance_constr_1, ReceiptDistance_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_ReceiptDistance_constr_1,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_ReceiptDistance_constr_1,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		ReceiptDistance_constraint
+	},
 	0, 0,	/* No members */
 	0	/* No specifics */
 };

@@ -11,14 +11,18 @@
  * This type is implemented using NativeEnumerated,
  * so here we adjust the DEF accordingly.
  */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_alphabetIndicator_constr_3 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_type_alphabetIndicator_constr_3 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 6,  6,  0,  32 }	/* (0..32) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static const asn_INTEGER_enum_map_t asn_MAP_alphabetIndicator_value2enum_3[] = {
 	{ 1,	16,	"latinAlphabetNo1" },
 	{ 2,	16,	"latinAlphabetNo2" },
@@ -113,7 +117,18 @@ asn_TYPE_descriptor_t asn_DEF_alphabetIndicator_3 = {
 	asn_DEF_alphabetIndicator_tags_3,	/* Same as above */
 	sizeof(asn_DEF_alphabetIndicator_tags_3)
 		/sizeof(asn_DEF_alphabetIndicator_tags_3[0]), /* 2 */
-	{ &asn_OER_type_alphabetIndicator_constr_3, &asn_PER_type_alphabetIndicator_constr_3, NativeEnumerated_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_alphabetIndicator_constr_3,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_alphabetIndicator_constr_3,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		NativeEnumerated_constraint
+	},
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_alphabetIndicator_specs_3	/* Additional specs */
 };
@@ -124,7 +139,18 @@ asn_TYPE_member_t asn_MBR_LPN_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_CountryCode,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"countryCode"
 		},
@@ -133,7 +159,18 @@ asn_TYPE_member_t asn_MBR_LPN_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_alphabetIndicator_3,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"alphabetIndicator"
 		},
@@ -142,7 +179,18 @@ asn_TYPE_member_t asn_MBR_LPN_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_OCTET_STRING,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"licencePlateNumber"
 		},
@@ -173,7 +221,18 @@ asn_TYPE_descriptor_t asn_DEF_LPN = {
 	asn_DEF_LPN_tags_1,	/* Same as above */
 	sizeof(asn_DEF_LPN_tags_1)
 		/sizeof(asn_DEF_LPN_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_LPN_1,
 	3,	/* Elements count */
 	&asn_SPC_LPN_specs_1	/* Additional specs */

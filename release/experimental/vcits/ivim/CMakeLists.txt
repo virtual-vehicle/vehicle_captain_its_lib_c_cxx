@@ -144,6 +144,7 @@ src/DrivenLineOffsetLg.c
 src/DrivenLineOffsetSm.c
 src/DrivingLaneStatus.c
 src/EFC-ContextMark.c
+src/EXTERNAL.c
 src/EfcDsrcApplication_DriverCharacteristics.c
 src/EfcDsrcApplication_StationType.c
 src/EfcDsrcApplication_TrailerCharacteristics.c
@@ -607,6 +608,8 @@ src/Zone.c
 src/ZoneIds.c
 src/ZoneLength.c
 )
+
+target_compile_options(vcits-ivim PRIVATE -Wno-incompatible-pointer-types)
 
 set_target_properties(vcits-ivim PROPERTIES VERSION ${PROJECT_VERSION})
 
