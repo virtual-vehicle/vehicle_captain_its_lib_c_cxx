@@ -27,17 +27,17 @@ RUN apt-get update \
   && apt-get install -y git \
     autoconf \
     libtool \
+    bison \
+    flex \
   && apt-get clean
 
 # install generator
 WORKDIR /tmp
-RUN git clone https://github.com/brchiu/asn1c.git -n asn1c
+RUN git clone https://github.com/mouse07410/asn1c.git
 WORKDIR /tmp/asn1c
-RUN git checkout velichkov_s1ap_plus_option_group_plus_adding_trailing_ull
 RUN test -f configure || autoreconf -iv
 RUN ./configure
 RUN make
-RUN make check
 RUN make install
 
 # create working environment
