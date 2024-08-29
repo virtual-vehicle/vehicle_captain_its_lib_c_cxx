@@ -17,7 +17,7 @@
 
 ### ### Defines ### ###
 VC_ITS_LIB_NAME="vcits"
-VC_ITS_LIB_VERSION="1.0"
+VC_ITS_LIB_VERSION="1.1"
 
 ROOT_DIR=$(pwd)
 ASN1C_DIR=/usr/local/share/asn1c
@@ -53,7 +53,7 @@ IS_TS_ISO_DIR=$VC_ITS_ASN1_SPECS_DIR/"etsi/is_ts103301/iso-patched"
 
 # Echo Headers
 AUTHOR_ECHO="# Authors:
-# - Christoph Pilz (christoph.pilz@v2c2.at)
+# - Christoph Pilz (christoph.pilz@v2c2.at) (gh: @MrMushroom)
 # "
 
 ### ### Functions ### ###
@@ -632,6 +632,7 @@ case $compilation_choice in
   # compile all standardized messages (non experimental)
   compile_DENM
   compile_CAM
+  compile_CPM
   compile_POI
   compile_SPATEM
   compile_MAPEM
