@@ -11,14 +11,18 @@
  * This type is implemented using NativeEnumerated,
  * so here we adjust the DEF accordingly.
  */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_tyreType_constr_4 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_type_tyreType_constr_4 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 2,  2,  0,  3 }	/* (0..3) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static const asn_INTEGER_enum_map_t asn_MAP_tyreType_value2enum_4[] = {
 	{ 0,	12,	"notSpecified" },
 	{ 1,	10,	"singleTyre" },
@@ -55,7 +59,18 @@ asn_TYPE_descriptor_t asn_DEF_tyreType_4 = {
 	asn_DEF_tyreType_tags_4,	/* Same as above */
 	sizeof(asn_DEF_tyreType_tags_4)
 		/sizeof(asn_DEF_tyreType_tags_4[0]), /* 2 */
-	{ &asn_OER_type_tyreType_constr_4, &asn_PER_type_tyreType_constr_4, NativeEnumerated_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_tyreType_constr_4,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_tyreType_constr_4,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		NativeEnumerated_constraint
+	},
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_tyreType_specs_4	/* Additional specs */
 };
@@ -66,7 +81,18 @@ static asn_TYPE_member_t asn_MBR_numberOfAxles_9[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_TrailerAxles,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"trailerAxles"
 		},
@@ -75,7 +101,18 @@ static asn_TYPE_member_t asn_MBR_numberOfAxles_9[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_TractorAxles,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"tractorAxles"
 		},
@@ -107,7 +144,18 @@ asn_TYPE_descriptor_t asn_DEF_numberOfAxles_9 = {
 	asn_DEF_numberOfAxles_tags_9,	/* Same as above */
 	sizeof(asn_DEF_numberOfAxles_tags_9)
 		/sizeof(asn_DEF_numberOfAxles_tags_9[0]), /* 2 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_numberOfAxles_9,
 	2,	/* Elements count */
 	&asn_SPC_numberOfAxles_specs_9	/* Additional specs */
@@ -119,7 +167,18 @@ static asn_TYPE_member_t asn_MBR_vehicleAxlesNumber_3[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_tyreType_4,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"tyreType"
 		},
@@ -128,7 +187,18 @@ static asn_TYPE_member_t asn_MBR_vehicleAxlesNumber_3[] = {
 		0,
 		&asn_DEF_numberOfAxles_9,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"numberOfAxles"
 		},
@@ -160,7 +230,18 @@ asn_TYPE_descriptor_t asn_DEF_vehicleAxlesNumber_3 = {
 	asn_DEF_vehicleAxlesNumber_tags_3,	/* Same as above */
 	sizeof(asn_DEF_vehicleAxlesNumber_tags_3)
 		/sizeof(asn_DEF_vehicleAxlesNumber_tags_3[0]), /* 2 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_vehicleAxlesNumber_3,
 	2,	/* Elements count */
 	&asn_SPC_vehicleAxlesNumber_specs_3	/* Additional specs */
@@ -172,7 +253,18 @@ static asn_TYPE_member_t asn_MBR_VehicleAxles_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Int1,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"vehicleFirstAxleHeight"
 		},
@@ -181,7 +273,18 @@ static asn_TYPE_member_t asn_MBR_VehicleAxles_1[] = {
 		0,
 		&asn_DEF_vehicleAxlesNumber_3,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"vehicleAxlesNumber"
 		},
@@ -211,7 +314,18 @@ asn_TYPE_descriptor_t asn_DEF_VehicleAxles = {
 	asn_DEF_VehicleAxles_tags_1,	/* Same as above */
 	sizeof(asn_DEF_VehicleAxles_tags_1)
 		/sizeof(asn_DEF_VehicleAxles_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_VehicleAxles_1,
 	2,	/* Elements count */
 	&asn_SPC_VehicleAxles_specs_1	/* Additional specs */

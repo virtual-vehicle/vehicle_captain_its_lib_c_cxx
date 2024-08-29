@@ -7,21 +7,36 @@
 
 #include "IviContainer.h"
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_IviContainer_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 asn_per_constraints_t asn_PER_type_IviContainer_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  3,  3,  0,  4 }	/* (0..4,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static asn_TYPE_member_t asn_MBR_ext1_8[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct IviContainer__ext1, avc),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_AutomatedVehicleContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"avc"
 		},
@@ -30,7 +45,18 @@ static asn_TYPE_member_t asn_MBR_ext1_8[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_MapLocationContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"mlc"
 		},
@@ -39,7 +65,18 @@ static asn_TYPE_member_t asn_MBR_ext1_8[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_RoadSurfaceContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"rsc"
 		},
@@ -72,7 +109,18 @@ asn_TYPE_descriptor_t asn_DEF_ext1_8 = {
 	asn_DEF_ext1_tags_8,	/* Same as above */
 	sizeof(asn_DEF_ext1_tags_8)
 		/sizeof(asn_DEF_ext1_tags_8[0]), /* 2 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_ext1_8,
 	3,	/* Elements count */
 	&asn_SPC_ext1_specs_8	/* Additional specs */
@@ -84,7 +132,18 @@ asn_TYPE_member_t asn_MBR_IviContainer_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_GeographicLocationContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"glc"
 		},
@@ -93,7 +152,18 @@ asn_TYPE_member_t asn_MBR_IviContainer_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_GeneralIviContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"giv"
 		},
@@ -102,7 +172,18 @@ asn_TYPE_member_t asn_MBR_IviContainer_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_RoadConfigurationContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"rcc"
 		},
@@ -111,7 +192,18 @@ asn_TYPE_member_t asn_MBR_IviContainer_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_TextContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"tc"
 		},
@@ -120,7 +212,18 @@ asn_TYPE_member_t asn_MBR_IviContainer_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_LayoutContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"lac"
 		},
@@ -129,7 +232,18 @@ asn_TYPE_member_t asn_MBR_IviContainer_1[] = {
 		0,
 		&asn_DEF_ext1_8,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"ext1"
 		},
@@ -160,7 +274,18 @@ asn_TYPE_descriptor_t asn_DEF_IviContainer = {
 	0,	/* No effective tags (count) */
 	0,	/* No tags (pointer) */
 	0,	/* No tags (count) */
-	{ &asn_OER_type_IviContainer_constr_1, &asn_PER_type_IviContainer_constr_1, CHOICE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_IviContainer_constr_1,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_IviContainer_constr_1,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		CHOICE_constraint
+	},
 	asn_MBR_IviContainer_1,
 	6,	/* Elements count */
 	&asn_SPC_IviContainer_specs_1	/* Additional specs */

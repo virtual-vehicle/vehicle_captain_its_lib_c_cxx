@@ -11,14 +11,18 @@
  * This type is implemented using NativeEnumerated,
  * so here we adjust the DEF accordingly.
  */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_TransitVehicleOccupancy_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 asn_per_constraints_t asn_PER_type_TransitVehicleOccupancy_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static const asn_INTEGER_enum_map_t asn_MAP_TransitVehicleOccupancy_value2enum_1[] = {
 	{ 0,	16,	"occupancyUnknown" },
 	{ 1,	14,	"occupancyEmpty" },
@@ -61,7 +65,18 @@ asn_TYPE_descriptor_t asn_DEF_TransitVehicleOccupancy = {
 	asn_DEF_TransitVehicleOccupancy_tags_1,	/* Same as above */
 	sizeof(asn_DEF_TransitVehicleOccupancy_tags_1)
 		/sizeof(asn_DEF_TransitVehicleOccupancy_tags_1[0]), /* 1 */
-	{ &asn_OER_type_TransitVehicleOccupancy_constr_1, &asn_PER_type_TransitVehicleOccupancy_constr_1, NativeEnumerated_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_TransitVehicleOccupancy_constr_1,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_TransitVehicleOccupancy_constr_1,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		NativeEnumerated_constraint
+	},
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_TransitVehicleOccupancy_specs_1	/* Additional specs */
 };

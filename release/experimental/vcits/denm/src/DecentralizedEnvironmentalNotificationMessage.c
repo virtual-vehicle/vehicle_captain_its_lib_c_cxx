@@ -16,7 +16,18 @@ asn_TYPE_member_t asn_MBR_DecentralizedEnvironmentalNotificationMessage_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ManagementContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"management"
 		},
@@ -25,7 +36,18 @@ asn_TYPE_member_t asn_MBR_DecentralizedEnvironmentalNotificationMessage_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_SituationContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"situation"
 		},
@@ -34,7 +56,18 @@ asn_TYPE_member_t asn_MBR_DecentralizedEnvironmentalNotificationMessage_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_LocationContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"location"
 		},
@@ -43,7 +76,18 @@ asn_TYPE_member_t asn_MBR_DecentralizedEnvironmentalNotificationMessage_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_AlacarteContainer,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"alacarte"
 		},
@@ -77,7 +121,18 @@ asn_TYPE_descriptor_t asn_DEF_DecentralizedEnvironmentalNotificationMessage = {
 	asn_DEF_DecentralizedEnvironmentalNotificationMessage_tags_1,	/* Same as above */
 	sizeof(asn_DEF_DecentralizedEnvironmentalNotificationMessage_tags_1)
 		/sizeof(asn_DEF_DecentralizedEnvironmentalNotificationMessage_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_DecentralizedEnvironmentalNotificationMessage_1,
 	4,	/* Elements count */
 	&asn_SPC_DecentralizedEnvironmentalNotificationMessage_specs_1	/* Additional specs */

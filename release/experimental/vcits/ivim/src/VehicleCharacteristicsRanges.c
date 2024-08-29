@@ -21,7 +21,7 @@ memb_numberOfAxles_constraint_3(const asn_TYPE_descriptor_t *td, const void *spt
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 7)) {
+	if((value >= 0L && value <= 7L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -32,29 +32,48 @@ memb_numberOfAxles_constraint_3(const asn_TYPE_descriptor_t *td, const void *spt
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_numberOfAxles_constr_4 CC_NOTUSED = {
 	{ 1, 1 }	/* (0..7) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_numberOfAxles_constr_4 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_type_limits_constr_3 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_type_limits_constr_3 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  3,  3,  0,  7 }	/* (0..7,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static asn_TYPE_member_t asn_MBR_limits_3[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct VehicleCharacteristicsRanges__limits, choice.numberOfAxles),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_numberOfAxles_constr_4, &asn_PER_memb_numberOfAxles_constr_4,  memb_numberOfAxles_constraint_3 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_numberOfAxles_constr_4,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_numberOfAxles_constr_4,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_numberOfAxles_constraint_3
+		},
 		0, 0, /* No default value */
 		"numberOfAxles"
 		},
@@ -63,7 +82,18 @@ static asn_TYPE_member_t asn_MBR_limits_3[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_VehicleDimensions,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"vehicleDimensions"
 		},
@@ -72,7 +102,18 @@ static asn_TYPE_member_t asn_MBR_limits_3[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_VehicleWeightLimits,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"vehicleWeightLimits"
 		},
@@ -81,7 +122,18 @@ static asn_TYPE_member_t asn_MBR_limits_3[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_AxleWeightLimits,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"axleWeightLimits"
 		},
@@ -90,7 +142,18 @@ static asn_TYPE_member_t asn_MBR_limits_3[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_PassengerCapacity,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"passengerCapacity"
 		},
@@ -99,7 +162,18 @@ static asn_TYPE_member_t asn_MBR_limits_3[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ExhaustEmissionValues,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"exhaustEmissionValues"
 		},
@@ -108,7 +182,18 @@ static asn_TYPE_member_t asn_MBR_limits_3[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DieselEmissionValues,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"dieselEmissionValues"
 		},
@@ -117,7 +202,18 @@ static asn_TYPE_member_t asn_MBR_limits_3[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_SoundLevel,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"soundLevel"
 		},
@@ -151,7 +247,18 @@ asn_TYPE_descriptor_t asn_DEF_limits_3 = {
 	0,	/* No effective tags (count) */
 	0,	/* No tags (pointer) */
 	0,	/* No tags (count) */
-	{ &asn_OER_type_limits_constr_3, &asn_PER_type_limits_constr_3, CHOICE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		&asn_OER_type_limits_constr_3,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		&asn_PER_type_limits_constr_3,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		CHOICE_constraint
+	},
 	asn_MBR_limits_3,
 	8,	/* Elements count */
 	&asn_SPC_limits_specs_3	/* Additional specs */
@@ -163,7 +270,18 @@ asn_TYPE_member_t asn_MBR_VehicleCharacteristicsRanges_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ComparisonOperator,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"comparisonOperator"
 		},
@@ -172,7 +290,18 @@ asn_TYPE_member_t asn_MBR_VehicleCharacteristicsRanges_1[] = {
 		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_limits_3,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"limits"
 		},
@@ -202,7 +331,18 @@ asn_TYPE_descriptor_t asn_DEF_VehicleCharacteristicsRanges = {
 	asn_DEF_VehicleCharacteristicsRanges_tags_1,	/* Same as above */
 	sizeof(asn_DEF_VehicleCharacteristicsRanges_tags_1)
 		/sizeof(asn_DEF_VehicleCharacteristicsRanges_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_VehicleCharacteristicsRanges_1,
 	2,	/* Elements count */
 	&asn_SPC_VehicleCharacteristicsRanges_specs_1	/* Additional specs */

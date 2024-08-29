@@ -84,6 +84,7 @@ src/DriveDirection.c
 src/DrivenLineOffsetLg.c
 src/DrivenLineOffsetSm.c
 src/DrivingLaneStatus.c
+src/EXTERNAL.c
 src/Elevation.c
 src/ElevationConfidence.c
 src/EmbarkationStatus.c
@@ -371,6 +372,8 @@ src/YawRateConfidence.c
 src/YawRateValue.c
 src/ZoneLength.c
 )
+
+target_compile_options(vcits-spatem PRIVATE -Wno-incompatible-pointer-types)
 
 set_target_properties(vcits-spatem PROPERTIES VERSION ${PROJECT_VERSION})
 

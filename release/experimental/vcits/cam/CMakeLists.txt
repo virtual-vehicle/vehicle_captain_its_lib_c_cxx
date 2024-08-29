@@ -50,6 +50,7 @@ src/DeltaReferencePosition.c
 src/DigitalMap.c
 src/DriveDirection.c
 src/DrivingLaneStatus.c
+src/EXTERNAL.c
 src/EmbarkationStatus.c
 src/EmergencyContainer.c
 src/EmergencyPriority.c
@@ -165,6 +166,8 @@ src/YawRate.c
 src/YawRateConfidence.c
 src/YawRateValue.c
 )
+
+target_compile_options(vcits-cam PRIVATE -Wno-incompatible-pointer-types)
 
 set_target_properties(vcits-cam PROPERTIES VERSION ${PROJECT_VERSION})
 

@@ -22,7 +22,7 @@ memb_offsetDistance_constraint_1(const asn_TYPE_descriptor_t *td, const void *sp
 	
 	value = *(const long *)sptr;
 	
-	if((value >= -32768 && value <= 32767)) {
+	if((value >= -32768L && value <= 32767L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -33,21 +33,36 @@ memb_offsetDistance_constraint_1(const asn_TYPE_descriptor_t *td, const void *sp
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_offsetDistance_constr_5 CC_NOTUSED = {
 	{ 2, 0 }	/* (-32768..32767) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_offsetDistance_constr_5 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 16,  16, -32768,  32767 }	/* (-32768..32767) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 asn_TYPE_member_t asn_MBR_ComputedSegment_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ComputedSegment, zoneId),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Zid,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"zoneId"
 		},
@@ -56,7 +71,18 @@ asn_TYPE_member_t asn_MBR_ComputedSegment_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_LanePosition,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"laneNumber"
 		},
@@ -65,7 +91,18 @@ asn_TYPE_member_t asn_MBR_ComputedSegment_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_IviLaneWidth,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"laneWidth"
 		},
@@ -74,7 +111,18 @@ asn_TYPE_member_t asn_MBR_ComputedSegment_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_offsetDistance_constr_5, &asn_PER_memb_offsetDistance_constr_5,  memb_offsetDistance_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_offsetDistance_constr_5,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_offsetDistance_constr_5,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_offsetDistance_constraint_1
+		},
 		0, 0, /* No default value */
 		"offsetDistance"
 		},
@@ -83,7 +131,18 @@ asn_TYPE_member_t asn_MBR_ComputedSegment_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DeltaReferencePosition,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"offsetPosition"
 		},
@@ -118,7 +177,18 @@ asn_TYPE_descriptor_t asn_DEF_ComputedSegment = {
 	asn_DEF_ComputedSegment_tags_1,	/* Same as above */
 	sizeof(asn_DEF_ComputedSegment_tags_1)
 		/sizeof(asn_DEF_ComputedSegment_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_ComputedSegment_1,
 	5,	/* Elements count */
 	&asn_SPC_ComputedSegment_specs_1	/* Additional specs */

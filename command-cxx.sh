@@ -31,7 +31,12 @@ VC_ITS_LIB_SRC_DIR=$VC_ITS_LIB_ROOT_DIR/"src"
 
 CDD_SPEC_v2=etsi/cdd_ts102894_2/ITS-Container.asn
 CAM_SPEC=etsi/cam_en302637_2/CAM-PDU-Descriptions.asn
-CPM_SPEC=experimental/CPM-PDU-Descriptions.asn
+CPM_SPEC=etsi/cpm_ts103324/asn/CPM-PDU-Descriptions.asn
+CPM_ORIGINATING_STATION_SPEC=etsi/cpm_ts103324/asn/CPM-OriginatingStationContainers.asn
+CPM_PERCEIVED_OBJECT_SPEC=etsi/cpm_ts103324/asn/CPM-PerceivedObjectContainer.asn
+CPM_PERCEPTION_REGION_SPEC=etsi/cpm_ts103324/asn/CPM-PerceptionRegionContainer.asn
+CPM_SENSOR_INFORMATION_SPEC=etsi/cpm_ts103324/asn/CPM-SensorInformationContainer.asn
+CPM_CDD_SPEC=etsi/cpm_ts103324/asn/cdd/ETSI-ITS-CDD.asn
 DENM_SPEC=etsi/denm_en302637_3/DENM-PDU-Descriptions.asn
 EVCSN_SPEC=etsi/evcsn-ts101556_1/EVCSN-PDU-Descriptions.asn
 EVRSR_SPEC=etsi/evrsr_ts101556_3/EV-RSR-PDU-Descriptions.asn
@@ -173,12 +178,13 @@ function compile_CAM() {
 }
 function compile_CPM() {
   install -d "$VC_ITS_LIB_ROOT_DIR"/cpm
-  asn1c -D "$VC_ITS_LIB_ROOT_DIR"/cpm -R -no-gen-example -fcompound-names -fno-include-deps -pdu=CPM \
+  asn1c -D "$VC_ITS_LIB_ROOT_DIR"/cpm -R -no-gen-example -fcompound-names -fno-include-deps \
     "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_SPEC" \
-    "$VC_ITS_ASN1_SPECS_DIR"/"$CAM_SPEC" \
-    "$VC_ITS_ASN1_SPECS_DIR"/"$CDD_SPEC_v2"\
-    "$IS_TS_ISO_DIR"/'ISO24534-3_ElectronicRegistrationIdentificationVehicleDataModule-patched.asn' \
-    "$ADDITIONAL_MODULES_DIR"/'ISO-TS-19091-addgrp-C-2018-patched.asn'
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_ORIGINATING_STATION_SPEC" \
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_PERCEIVED_OBJECT_SPEC" \
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_PERCEPTION_REGION_SPEC" \
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_SENSOR_INFORMATION_SPEC" \
+    "$VC_ITS_ASN1_SPECS_DIR"/"$CPM_CDD_SPEC"
 
   install -d "$VC_ITS_LIB_ROOT_DIR"/cpm/src
   mv "$VC_ITS_LIB_ROOT_DIR"/cpm/*.c "$VC_ITS_LIB_ROOT_DIR"/cpm/src/
@@ -336,17 +342,11 @@ function pack_cmake_root_cmake_file() {
       fi
     done
     echo ""
-    echo "add_library($VC_ITS_LIB_NAME SHARED \"\")"
-    echo ""
-    echo "set_target_properties($VC_ITS_LIB_NAME PROPERTIES"
-    echo "LINKER_LANGUAGE CXX"
-    echo "COMPILE_FLAGS \"-std=gnu99 -Wall -Wextra\""
-    echo "LINK_FLAGS \"-std=gnu99 -Wall -Wextra\""
-    echo ")"
+    echo "add_library($VC_ITS_LIB_NAME INTERFACE)"
     echo ""
     echo "set_target_properties($VC_ITS_LIB_NAME PROPERTIES VERSION \${PROJECT_VERSION})"
     echo ""
-    echo "target_link_libraries($VC_ITS_LIB_NAME PUBLIC"
+    echo "target_link_libraries($VC_ITS_LIB_NAME INTERFACE"
     for dir in "$VC_ITS_LIB_ROOT_DIR"/*; do
       if [ -d "$dir" ]; then
         echo "$VC_ITS_LIB_NAME-$(basename "$dir")"
@@ -389,6 +389,8 @@ function pack_cmake_submodule_cmake_files() {
         echo "$cur_lib_sources"
         echo ")"
         echo ""
+        echo "target_compile_options($cur_lib_name PRIVATE -Wno-incompatible-pointer-types)"
+        echo ""
         echo "set_target_properties($cur_lib_name PROPERTIES VERSION \${PROJECT_VERSION})"
         echo ""
         echo "target_include_directories($cur_lib_name PRIVATE .)"
@@ -422,17 +424,11 @@ function pack_cmake_exception_module() {
     echo ""
     echo "project($VC_ITS_LIB_NAME-exceptions VERSION $VC_ITS_LIB_VERSION DESCRIPTION \"Exceptions of vehicleCAPTAIN ITS Library\")"
     echo ""
-    echo "add_library($VC_ITS_LIB_NAME-exceptions SHARED \"\")"
-    echo ""
-    echo "set_target_properties($VC_ITS_LIB_NAME-exceptions PROPERTIES"
-    echo "LINKER_LANGUAGE CXX"
-    echo "COMPILE_FLAGS \"-Wall -Wextra\""
-    echo "LINK_FLAGS \"-Wall -Wextra\""
-    echo ")"
+    echo "add_library($VC_ITS_LIB_NAME-exceptions INTERFACE)"
     echo ""
     echo "set_target_properties($VC_ITS_LIB_NAME-exceptions PROPERTIES VERSION \${PROJECT_VERSION})"
     echo ""
-    echo "target_include_directories($VC_ITS_LIB_NAME-exceptions PRIVATE .)"
+    echo "target_include_directories($VC_ITS_LIB_NAME-exceptions INTERFACE \$<BUILD_INTERFACE:\${CMAKE_CURRENT_SOURCE_DIR}> \$<INSTALL_INTERFACE:include/\${\$PROJECT_NAME}>)"
     echo ""
     echo "message(STATUS \"--> Configure build of |-$VC_ITS_LIB_NAME-exceptions - done\")"
     echo ""
@@ -470,10 +466,8 @@ function pack_cmake_parser_module() {
     echo "$parser_lib_sources"
     echo ")"
     echo ""
-    echo "set_target_properties($VC_ITS_LIB_NAME-parser PROPERTIES"
-    echo "COMPILE_FLAGS \"-Wall -Wextra\""
-    echo "LINK_FLAGS \"-Wall -Wextra\""
-    echo ")"
+    echo "target_compile_options($VC_ITS_LIB_NAME-parser  PRIVATE -Wall -Wextra -Wno-incompatible-pointer-types)"
+    echo "target_link_options($VC_ITS_LIB_NAME-parser  PRIVATE -Wall -Wextra)"
     echo ""
     echo "set_target_properties($VC_ITS_LIB_NAME-parser PROPERTIES VERSION \${PROJECT_VERSION})"
     echo ""

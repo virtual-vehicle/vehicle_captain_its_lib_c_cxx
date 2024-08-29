@@ -22,7 +22,7 @@ memb_sessionTypeOfContract_constraint_1(const asn_TYPE_descriptor_t *td, const v
 	
 	size = st->size;
 	
-	if((size == 2)) {
+	if((size == 2UL)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -47,7 +47,7 @@ memb_sessionContextVersion_constraint_1(const asn_TYPE_descriptor_t *td, const v
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 127)) {
+	if((value >= 0L && value <= 127L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -73,7 +73,7 @@ memb_receiptDataAuthenticator_constraint_1(const asn_TYPE_descriptor_t *td, cons
 	
 	size = st->size;
 	
-	if((size == 4)) {
+	if((size == 4UL)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -84,37 +84,60 @@ memb_receiptDataAuthenticator_constraint_1(const asn_TYPE_descriptor_t *td, cons
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_sessionTypeOfContract_constr_12 CC_NOTUSED = {
 	{ 0, 0 },
 	2	/* (SIZE(2..2)) */};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_sessionTypeOfContract_constr_12 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 0,  0,  2,  2 }	/* (SIZE(2..2)) */,
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_sessionContextVersion_constr_13 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_sessionContextVersion_constr_13 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  7,  7,  0,  127 }	/* (0..127,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_receiptDataAuthenticator_constr_14 CC_NOTUSED = {
 	{ 0, 0 },
 	4	/* (SIZE(4..4)) */};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_receiptDataAuthenticator_constr_14 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 0,  0,  4,  4 }	/* (SIZE(4..4)) */,
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ReceiptData, sessionTime),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DateAndTime,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionTime"
 		},
@@ -123,7 +146,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Provider,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionServiceProvider"
 		},
@@ -132,7 +166,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Int2,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"locationOfStation"
 		},
@@ -141,7 +186,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_SessionLocation,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionLocation"
 		},
@@ -150,7 +206,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Int1,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionType"
 		},
@@ -159,7 +226,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ResultOp,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionResult"
 		},
@@ -168,7 +246,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Int1,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionTariffClass"
 		},
@@ -177,7 +266,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Int1,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionClaimedClass"
 		},
@@ -186,7 +286,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_PaymentFee,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionFee"
 		},
@@ -195,7 +306,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Provider,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"sessionContractProvider"
 		},
@@ -204,7 +326,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_OCTET_STRING,
 		0,
-		{ &asn_OER_memb_sessionTypeOfContract_constr_12, &asn_PER_memb_sessionTypeOfContract_constr_12,  memb_sessionTypeOfContract_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_sessionTypeOfContract_constr_12,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_sessionTypeOfContract_constr_12,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_sessionTypeOfContract_constraint_1
+		},
 		0, 0, /* No default value */
 		"sessionTypeOfContract"
 		},
@@ -213,7 +346,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_sessionContextVersion_constr_13, &asn_PER_memb_sessionContextVersion_constr_13,  memb_sessionContextVersion_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_sessionContextVersion_constr_13,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_sessionContextVersion_constr_13,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_sessionContextVersion_constraint_1
+		},
 		0, 0, /* No default value */
 		"sessionContextVersion"
 		},
@@ -222,7 +366,18 @@ asn_TYPE_member_t asn_MBR_ReceiptData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_OCTET_STRING,
 		0,
-		{ &asn_OER_memb_receiptDataAuthenticator_constr_14, &asn_PER_memb_receiptDataAuthenticator_constr_14,  memb_receiptDataAuthenticator_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_receiptDataAuthenticator_constr_14,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_receiptDataAuthenticator_constr_14,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_receiptDataAuthenticator_constraint_1
+		},
 		0, 0, /* No default value */
 		"receiptDataAuthenticator"
 		},
@@ -263,7 +418,18 @@ asn_TYPE_descriptor_t asn_DEF_ReceiptData = {
 	asn_DEF_ReceiptData_tags_1,	/* Same as above */
 	sizeof(asn_DEF_ReceiptData_tags_1)
 		/sizeof(asn_DEF_ReceiptData_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_ReceiptData_1,
 	13,	/* Elements count */
 	&asn_SPC_ReceiptData_specs_1	/* Additional specs */

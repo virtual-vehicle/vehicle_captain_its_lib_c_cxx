@@ -25,17 +25,11 @@ add_subdirectory(srem)
 add_subdirectory(ssem)
 add_subdirectory(vccontainer)
 
-add_library(vcits SHARED "")
-
-set_target_properties(vcits PROPERTIES
-LINKER_LANGUAGE CXX
-COMPILE_FLAGS "-std=gnu99 -Wall -Wextra"
-LINK_FLAGS "-std=gnu99 -Wall -Wextra"
-)
+add_library(vcits INTERFACE)
 
 set_target_properties(vcits PROPERTIES VERSION ${PROJECT_VERSION})
 
-target_link_libraries(vcits PUBLIC
+target_link_libraries(vcits INTERFACE
 vcits-asn1c
 vcits-cam
 vcits-cpm

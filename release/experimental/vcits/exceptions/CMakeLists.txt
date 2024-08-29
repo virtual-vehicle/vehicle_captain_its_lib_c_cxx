@@ -11,17 +11,11 @@ message(STATUS "--> Configure build of |-vcits-exceptions")
 
 project(vcits-exceptions VERSION 1.0 DESCRIPTION "Exceptions of vehicleCAPTAIN ITS Library")
 
-add_library(vcits-exceptions SHARED "")
-
-set_target_properties(vcits-exceptions PROPERTIES
-LINKER_LANGUAGE CXX
-COMPILE_FLAGS "-Wall -Wextra"
-LINK_FLAGS "-Wall -Wextra"
-)
+add_library(vcits-exceptions INTERFACE)
 
 set_target_properties(vcits-exceptions PROPERTIES VERSION ${PROJECT_VERSION})
 
-target_include_directories(vcits-exceptions PRIVATE .)
+target_include_directories(vcits-exceptions INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}> $<INSTALL_INTERFACE:include/${$PROJECT_NAME}>)
 
 message(STATUS "--> Configure build of |-vcits-exceptions - done")
 

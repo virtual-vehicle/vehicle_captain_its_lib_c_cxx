@@ -27,7 +27,7 @@ memb_ownerCode_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 		size = 0;
 	}
 	
-	if((size == 19)) {
+	if((size == 19UL)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -52,7 +52,7 @@ memb_serialNumber_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 1000000)) {
+	if((value >= 0L && value <= 1000000L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -77,7 +77,7 @@ memb_checkDigit_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 10)) {
+	if((value >= 0L && value <= 10L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -102,7 +102,7 @@ memb_length_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 1 && value <= 2000)) {
+	if((value >= 1L && value <= 2000L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -127,7 +127,7 @@ memb_height_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 1 && value <= 500)) {
+	if((value >= 1L && value <= 500L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -152,7 +152,7 @@ memb_width_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 200 && value <= 300)) {
+	if((value >= 200L && value <= 300L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -177,7 +177,7 @@ memb_containerTypeCode_constraint_1(const asn_TYPE_descriptor_t *td, const void 
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 127)) {
+	if((value >= 0L && value <= 127L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -202,7 +202,7 @@ memb_maximumGrossMass_constraint_1(const asn_TYPE_descriptor_t *td, const void *
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 19 && value <= 500)) {
+	if((value >= 19L && value <= 500L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -227,7 +227,7 @@ memb_tareMass_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 0 && value <= 99)) {
+	if((value >= 0L && value <= 99L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -258,7 +258,7 @@ memb_fill_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 		size = 0;
 	}
 	
-	if((size == 3)) {
+	if((size == 3UL)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -269,93 +269,152 @@ memb_fill_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_ownerCode_constr_2 CC_NOTUSED = {
 	{ 0, 0 },
 	19	/* (SIZE(19..19)) */};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_ownerCode_constr_2 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 0,  0,  19,  19 }	/* (SIZE(19..19)) */,
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+static asn_jer_constraints_t asn_JER_memb_ownerCode_constr_2 CC_NOTUSED = {
+	19};
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_serialNumber_constr_3 CC_NOTUSED = {
 	{ 4, 1 }	/* (0..1000000) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_serialNumber_constr_3 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 20, -1,  0,  1000000 }	/* (0..1000000) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_checkDigit_constr_4 CC_NOTUSED = {
 	{ 1, 1 }	/* (0..10) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_checkDigit_constr_4 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 4,  4,  0,  10 }	/* (0..10) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_length_constr_5 CC_NOTUSED = {
 	{ 2, 1 }	/* (1..2000) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_length_constr_5 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 11,  11,  1,  2000 }	/* (1..2000) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_height_constr_6 CC_NOTUSED = {
 	{ 2, 1 }	/* (1..500) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_height_constr_6 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 9,  9,  1,  500 }	/* (1..500) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_width_constr_7 CC_NOTUSED = {
 	{ 2, 1 }	/* (200..300) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_width_constr_7 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 7,  7,  200,  300 }	/* (200..300) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_containerTypeCode_constr_8 CC_NOTUSED = {
 	{ 1, 1 }	/* (0..127) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_containerTypeCode_constr_8 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 7,  7,  0,  127 }	/* (0..127) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_maximumGrossMass_constr_9 CC_NOTUSED = {
 	{ 2, 1 }	/* (19..500) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_maximumGrossMass_constr_9 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 9,  9,  19,  500 }	/* (19..500) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_tareMass_constr_10 CC_NOTUSED = {
 	{ 1, 1 }	/* (0..99) */,
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_tareMass_constr_10 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 7,  7,  0,  99 }	/* (0..99) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_fill_constr_11 CC_NOTUSED = {
 	{ 0, 0 },
 	3	/* (SIZE(3..3)) */};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_fill_constr_11 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 0,  0,  3,  3 }	/* (SIZE(3..3)) */,
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+static asn_jer_constraints_t asn_JER_memb_fill_constr_11 CC_NOTUSED = {
+	3};
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
 asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct FreightContainerData, ownerCode),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_BIT_STRING,
 		0,
-		{ &asn_OER_memb_ownerCode_constr_2, &asn_PER_memb_ownerCode_constr_2,  memb_ownerCode_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_ownerCode_constr_2,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_ownerCode_constr_2,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			&asn_JER_memb_ownerCode_constr_2,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_ownerCode_constraint_1
+		},
 		0, 0, /* No default value */
 		"ownerCode"
 		},
@@ -364,7 +423,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_serialNumber_constr_3, &asn_PER_memb_serialNumber_constr_3,  memb_serialNumber_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_serialNumber_constr_3,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_serialNumber_constr_3,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_serialNumber_constraint_1
+		},
 		0, 0, /* No default value */
 		"serialNumber"
 		},
@@ -373,7 +443,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_checkDigit_constr_4, &asn_PER_memb_checkDigit_constr_4,  memb_checkDigit_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_checkDigit_constr_4,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_checkDigit_constr_4,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_checkDigit_constraint_1
+		},
 		0, 0, /* No default value */
 		"checkDigit"
 		},
@@ -382,7 +463,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_length_constr_5, &asn_PER_memb_length_constr_5,  memb_length_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_length_constr_5,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_length_constr_5,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_length_constraint_1
+		},
 		0, 0, /* No default value */
 		"length"
 		},
@@ -391,7 +483,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_height_constr_6, &asn_PER_memb_height_constr_6,  memb_height_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_height_constr_6,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_height_constr_6,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_height_constraint_1
+		},
 		0, 0, /* No default value */
 		"height"
 		},
@@ -400,7 +503,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_width_constr_7, &asn_PER_memb_width_constr_7,  memb_width_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_width_constr_7,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_width_constr_7,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_width_constraint_1
+		},
 		0, 0, /* No default value */
 		"width"
 		},
@@ -409,7 +523,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_containerTypeCode_constr_8, &asn_PER_memb_containerTypeCode_constr_8,  memb_containerTypeCode_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_containerTypeCode_constr_8,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_containerTypeCode_constr_8,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_containerTypeCode_constraint_1
+		},
 		0, 0, /* No default value */
 		"containerTypeCode"
 		},
@@ -418,7 +543,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_maximumGrossMass_constr_9, &asn_PER_memb_maximumGrossMass_constr_9,  memb_maximumGrossMass_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_maximumGrossMass_constr_9,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_maximumGrossMass_constr_9,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_maximumGrossMass_constraint_1
+		},
 		0, 0, /* No default value */
 		"maximumGrossMass"
 		},
@@ -427,7 +563,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_tareMass_constr_10, &asn_PER_memb_tareMass_constr_10,  memb_tareMass_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_tareMass_constr_10,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_tareMass_constr_10,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_tareMass_constraint_1
+		},
 		0, 0, /* No default value */
 		"tareMass"
 		},
@@ -436,7 +583,18 @@ asn_TYPE_member_t asn_MBR_FreightContainerData_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_BIT_STRING,
 		0,
-		{ &asn_OER_memb_fill_constr_11, &asn_PER_memb_fill_constr_11,  memb_fill_constraint_1 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_fill_constr_11,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_fill_constr_11,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			&asn_JER_memb_fill_constr_11,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_fill_constraint_1
+		},
 		0, 0, /* No default value */
 		"fill"
 		},
@@ -474,7 +632,18 @@ asn_TYPE_descriptor_t asn_DEF_FreightContainerData = {
 	asn_DEF_FreightContainerData_tags_1,	/* Same as above */
 	sizeof(asn_DEF_FreightContainerData_tags_1)
 		/sizeof(asn_DEF_FreightContainerData_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_FreightContainerData_1,
 	10,	/* Elements count */
 	&asn_SPC_FreightContainerData_specs_1	/* Additional specs */

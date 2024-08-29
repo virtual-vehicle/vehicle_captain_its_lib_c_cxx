@@ -23,6 +23,7 @@
 
 extern "C" {
 #include "asn_application.h"
+#include "asn_internal.h"
 }
 
 class Decoder {

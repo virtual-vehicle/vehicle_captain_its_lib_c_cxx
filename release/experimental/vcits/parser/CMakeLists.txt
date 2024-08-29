@@ -16,10 +16,8 @@ src/Decoder.cpp
 src/Encoder.cpp
 )
 
-set_target_properties(vcits-parser PROPERTIES
-COMPILE_FLAGS "-Wall -Wextra"
-LINK_FLAGS "-Wall -Wextra"
-)
+target_compile_options(vcits-parser  PRIVATE -Wall -Wextra -Wno-incompatible-pointer-types)
+target_link_options(vcits-parser  PRIVATE -Wall -Wextra)
 
 set_target_properties(vcits-parser PROPERTIES VERSION ${PROJECT_VERSION})
 

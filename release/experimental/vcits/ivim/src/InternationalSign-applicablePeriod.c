@@ -22,7 +22,7 @@ memb_yearRangeStartYear_constraint_2(const asn_TYPE_descriptor_t *td, const void
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 2000 && value <= 2127)) {
+	if((value >= 2000L && value <= 2127L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -47,7 +47,7 @@ memb_yearRangeEndYear_constraint_2(const asn_TYPE_descriptor_t *td, const void *
 	
 	value = *(const long *)sptr;
 	
-	if((value >= 2000 && value <= 2127)) {
+	if((value >= 2000L && value <= 2127L)) {
 		/* Constraint check succeeded */
 		return 0;
 	} else {
@@ -58,29 +58,48 @@ memb_yearRangeEndYear_constraint_2(const asn_TYPE_descriptor_t *td, const void *
 	}
 }
 
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_yearRangeStartYear_constr_3 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_yearRangeStartYear_constr_3 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  7,  7,  2000,  2127 }	/* (2000..2127,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_OER_SUPPORT)
 static asn_oer_constraints_t asn_OER_memb_yearRangeEndYear_constr_4 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 static asn_per_constraints_t asn_PER_memb_yearRangeEndYear_constr_4 CC_NOTUSED = {
 	{ APC_CONSTRAINED | APC_EXTENSIBLE,  7,  7,  2000,  2127 }	/* (2000..2127,...) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
 static asn_TYPE_member_t asn_MBR_year_2[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct InternationalSign_applicablePeriod__year, yearRangeStartYear),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_yearRangeStartYear_constr_3, &asn_PER_memb_yearRangeStartYear_constr_3,  memb_yearRangeStartYear_constraint_2 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_yearRangeStartYear_constr_3,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_yearRangeStartYear_constr_3,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_yearRangeStartYear_constraint_2
+		},
 		0, 0, /* No default value */
 		"yearRangeStartYear"
 		},
@@ -89,7 +108,18 @@ static asn_TYPE_member_t asn_MBR_year_2[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,
-		{ &asn_OER_memb_yearRangeEndYear_constr_4, &asn_PER_memb_yearRangeEndYear_constr_4,  memb_yearRangeEndYear_constraint_2 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			&asn_OER_memb_yearRangeEndYear_constr_4,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			&asn_PER_memb_yearRangeEndYear_constr_4,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			memb_yearRangeEndYear_constraint_2
+		},
 		0, 0, /* No default value */
 		"yearRangeEndYear"
 		},
@@ -121,7 +151,18 @@ asn_TYPE_descriptor_t asn_DEF_year_2 = {
 	asn_DEF_year_tags_2,	/* Same as above */
 	sizeof(asn_DEF_year_tags_2)
 		/sizeof(asn_DEF_year_tags_2[0]), /* 2 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_year_2,
 	2,	/* Elements count */
 	&asn_SPC_year_specs_2	/* Additional specs */
@@ -133,7 +174,18 @@ static asn_TYPE_member_t asn_MBR_month_day_5[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_MonthDay,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"dateRangeStartMonthDay"
 		},
@@ -142,7 +194,18 @@ static asn_TYPE_member_t asn_MBR_month_day_5[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_MonthDay,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"dateRangeEndMonthDay"
 		},
@@ -174,7 +237,18 @@ asn_TYPE_descriptor_t asn_DEF_month_day_5 = {
 	asn_DEF_month_day_tags_5,	/* Same as above */
 	sizeof(asn_DEF_month_day_tags_5)
 		/sizeof(asn_DEF_month_day_tags_5[0]), /* 2 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_month_day_5,
 	2,	/* Elements count */
 	&asn_SPC_month_day_specs_5	/* Additional specs */
@@ -186,7 +260,18 @@ static asn_TYPE_member_t asn_MBR_hourMinutes_9[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_HoursMinutes,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"timeRangeStartTime"
 		},
@@ -195,7 +280,18 @@ static asn_TYPE_member_t asn_MBR_hourMinutes_9[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_HoursMinutes,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"timeRangeEndTime"
 		},
@@ -227,7 +323,18 @@ asn_TYPE_descriptor_t asn_DEF_hourMinutes_9 = {
 	asn_DEF_hourMinutes_tags_9,	/* Same as above */
 	sizeof(asn_DEF_hourMinutes_tags_9)
 		/sizeof(asn_DEF_hourMinutes_tags_9[0]), /* 2 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_hourMinutes_9,
 	2,	/* Elements count */
 	&asn_SPC_hourMinutes_specs_9	/* Additional specs */
@@ -239,7 +346,18 @@ asn_TYPE_member_t asn_MBR_InternationalSign_applicablePeriod_1[] = {
 		0,
 		&asn_DEF_year_2,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"year"
 		},
@@ -248,7 +366,18 @@ asn_TYPE_member_t asn_MBR_InternationalSign_applicablePeriod_1[] = {
 		0,
 		&asn_DEF_month_day_5,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"month-day"
 		},
@@ -257,7 +386,18 @@ asn_TYPE_member_t asn_MBR_InternationalSign_applicablePeriod_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_RepeatingPeriodDayTypes,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"repeatingPeriodDayTypes"
 		},
@@ -266,7 +406,18 @@ asn_TYPE_member_t asn_MBR_InternationalSign_applicablePeriod_1[] = {
 		0,
 		&asn_DEF_hourMinutes_9,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"hourMinutes"
 		},
@@ -275,7 +426,18 @@ asn_TYPE_member_t asn_MBR_InternationalSign_applicablePeriod_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_DayOfWeek,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"dateRangeOfWeek"
 		},
@@ -284,7 +446,18 @@ asn_TYPE_member_t asn_MBR_InternationalSign_applicablePeriod_1[] = {
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_HoursMinutes,
 		0,
-		{ 0, 0, 0 },
+		{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+			0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+			0
+		},
 		0, 0, /* No default value */
 		"durationHourMinute"
 		},
@@ -320,7 +493,18 @@ asn_TYPE_descriptor_t asn_DEF_InternationalSign_applicablePeriod = {
 	asn_DEF_InternationalSign_applicablePeriod_tags_1,	/* Same as above */
 	sizeof(asn_DEF_InternationalSign_applicablePeriod_tags_1)
 		/sizeof(asn_DEF_InternationalSign_applicablePeriod_tags_1[0]), /* 1 */
-	{ 0, 0, SEQUENCE_constraint },
+	{
+#if !defined(ASN_DISABLE_OER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_OER_SUPPORT) */
+#if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT) */
+#if !defined(ASN_DISABLE_JER_SUPPORT)
+		0,
+#endif  /* !defined(ASN_DISABLE_JER_SUPPORT) */
+		SEQUENCE_constraint
+	},
 	asn_MBR_InternationalSign_applicablePeriod_1,
 	6,	/* Elements count */
 	&asn_SPC_InternationalSign_applicablePeriod_specs_1	/* Additional specs */
