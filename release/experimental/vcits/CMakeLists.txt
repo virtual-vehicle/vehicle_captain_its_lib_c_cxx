@@ -4,7 +4,7 @@
 # - Christoph Pilz (christoph.pilz@v2c2.at) (gh: @MrMushroom)
 # 
 
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.13)
 
 message(STATUS "--> Configure build of vcits")
 
@@ -27,7 +27,7 @@ add_subdirectory(vccontainer)
 
 add_library(vcits INTERFACE)
 
-set_target_properties(vcits PROPERTIES VERSION ${PROJECT_VERSION})
+set_target_properties(vcits PROPERTIES INTERFACE_LIB_VERSION ${PROJECT_VERSION})
 
 target_link_libraries(vcits INTERFACE
 vcits-asn1c

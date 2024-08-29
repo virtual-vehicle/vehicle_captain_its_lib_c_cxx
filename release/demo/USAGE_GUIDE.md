@@ -4,6 +4,6 @@
 3. Execute the following lines
 
 ```bash
-./docker-generation-environment-build-and-run.sh
+./docker-generation-demo-build-and-run.sh
 docker exec vcits_demo ./vcitsTesting
 ```

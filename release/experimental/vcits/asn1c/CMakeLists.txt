@@ -4,7 +4,7 @@
 # - Christoph Pilz (christoph.pilz@v2c2.at) (gh: @MrMushroom)
 # 
 
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.13)
 
 message(STATUS "--> Configure build of |-vcits-asn1c")
 
@@ -227,7 +227,7 @@ src/xer_support.c
 
 target_compile_options(vcits-asn1c PRIVATE -Wno-incompatible-pointer-types)
 
-set_target_properties(vcits-asn1c PROPERTIES VERSION ${PROJECT_VERSION})
+set_target_properties(vcits-asn1c PROPERTIES INTERFACE_LIB_VERSION ${PROJECT_VERSION})
 
 target_include_directories(vcits-asn1c PRIVATE .)
 target_include_directories(vcits-asn1c PRIVATE ../asn1c)

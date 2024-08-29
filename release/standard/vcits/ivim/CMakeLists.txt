@@ -4,7 +4,7 @@
 # - Christoph Pilz (christoph.pilz@v2c2.at) (gh: @MrMushroom)
 # 
 
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.13)
 
 message(STATUS "--> Configure build of |-vcits-ivim")
 
@@ -611,7 +611,7 @@ src/ZoneLength.c
 
 target_compile_options(vcits-ivim PRIVATE -Wno-incompatible-pointer-types)
 
-set_target_properties(vcits-ivim PROPERTIES VERSION ${PROJECT_VERSION})
+set_target_properties(vcits-ivim PROPERTIES INTERFACE_LIB_VERSION ${PROJECT_VERSION})
 
 target_include_directories(vcits-ivim PRIVATE .)
 target_include_directories(vcits-ivim PRIVATE ../asn1c)

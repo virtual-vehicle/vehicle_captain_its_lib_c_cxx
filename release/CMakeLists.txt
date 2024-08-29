@@ -3,10 +3,10 @@
 # - Patrizia Neubauer (patrizia.neubauer@v2c2.at)
 #
 
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.13)
 
 # set the project name
-project(vcits_testing VERSION 1.0 DESCRIPTION "vcits testing for the V2X Routing Platform" LANGUAGES C CXX)
+project(vcits_testing VERSION 1.1 DESCRIPTION "vcits: testing of the CXX V2X library of the vehicleCAPTAIN toolbox" LANGUAGES C CXX)
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 14)
@@ -16,7 +16,7 @@ add_subdirectory(experimental/vcits)
 
 # add include directories
 include_directories(.)
-include_directories(experimental/vcits/asn1c) #vifits lib headers reference this
+include_directories(experimental/vcits/asn1c) #vcits lib headers reference this
 
 # add the executable
 add_executable(vcitsTesting demo/main.cpp)
